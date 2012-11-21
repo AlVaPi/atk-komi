@@ -1,0 +1,74 @@
+<html>
+
+<head>
+  <title>АТК-Коми. Сайт в разработке</title>
+</head>
+
+<body>
+<p><h3>В настоящее время сайт находится в разработке, а пока вы можете прийти к нам по адресу</h3></p>
+<div align="center">
+	<p><h2>Республика Коми, г. Ухта, ул. Строительная, 8</h1></p>
+	<iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://www.openstreetmap.org/export/embed.html?bbox=53.70343,63.56644,53.71395,63.57023&amp;layer=mapnik&amp;marker=63.56830,53.71126" style="border: 1px solid black"></iframe><br /><small><a href="http://www.openstreetmap.org/?lat=63.568335&amp;lon=53.70869&amp;zoom=16&amp;layers=M&amp;mlat=63.56830&amp;mlon=53.71126"></a></small>
+</div>
+
+<p><h3>или позвонить по телефонам</h3></p>
+<div align="center">
+	<p align="center"><h2>8(8216)740508, 8(8216)740508</h2></p>
+</div>
+
+<p><h3>или отправить сообщение</h3></p>
+<div align="center">
+	<!-- Начало формы -->
+<input type="hidden" name="ipwhoisformconstructor" value="byJustBlackBird"/>
+<style type="text/css">
+#formBody{background-color: eeeeee;color: 333333;border: solid 1px dddddd;width: 450px;font-size: 14px;padding-bottom: 10px;}
+#formHeader{background-color: 0099ff;color: ffffff;height: 22px;font-weight: bold;text-align:center;margin-bottom:2px;}
+.formBodyInput{background-color: ffffff;color: 000000;border: solid; border-width:1px; border-color: dddddd;font-size: 13px;margin-left: 10px;margin-right: 10px;height: 16px;width: 422px;}
+#formBody textarea{background-color: ffffff;color: 000000;border: solid; border-width:1px; border-color: dddddd;margin-left: 10px;margin-right: 10px;height: 64px;width: 422px;}
+.input-header{margin-left: 10px;margin-right: 10px;margin-top: 2px;margin-bottom: 2px;}
+</style>
+<script type="text/javascript">
+	function sendEMail(){		var res=true;
+		var re = new RegExp("^[-a-z\.0-9/]+@[-a-z\.0-9/]+\.[a-z]{2,6}$","i");
+		res = res && (document.getElementById("name").value != "") && (document.getElementById("msg").value != "") && (re.exec(document.getElementById("email").value) != null) && (document.getElementById("capcha").value != "");
+		 if(res){		 	document.getElementById("callbackForm").submit()
+		 	}
+		 	else{		 		alert("Заполните все поля правильно!");
+		 		}
+	}
+</script>
+<script language=JavaScript>
+	function show_ipwhois(){		var obj = document.getElementById("show_ipwhois");
+		if (obj.style.display == "none") obj.style.display = "";
+		else obj.style.display = "none";
+		return false;
+	}
+</script>
+<div id="formBody">
+	<div id="formHeader">Обратная связь</div>
+		<form action="mail.php" method="post" id="callbackForm">
+			<div class="input-header">Ваше имя</div>
+			<input type="hidden" name="name_title" value="Ваше имя" />
+			<input type="text" maxlength="100" name="name" id="name" class="formBodyInput" />
+			<div class="input-header">Ваша эл.почта</div>
+			<input type="hidden" name="email_title" value="Ваша эл.почта" />
+			<input type="text" maxlength="100" name="email" id="email" class="formBodyInput" />
+			<div class="input-header">Сообщение</div>
+			<input type="hidden" name="msg_title" value="Сообщение" />
+			<textarea name="msg" id="msg" ></textarea>
+			<br />
+			<div class="input-header">Число с картинки</div>
+			<input type="text" maxlength="5" name="capcha" id="capcha" class="formBodyInput" />
+		</form>
+		<div style="margin-left:10px; margin-right: 10px; margin-bottom: 10px; margin-top: 4px;">
+			<img src="http://ip-whois.net/forma-obratnoj-svyazi/images/capcha.php" style="float: left; border: none;" />
+			&nbsp;&nbsp;
+			<button onclick="sendEMail()" style="margin-top: 6px;">Отправить</button>
+		</div>
+	</div>
+<!-- Конец формы -->
+</div>
+
+</body>
+
+</html>
